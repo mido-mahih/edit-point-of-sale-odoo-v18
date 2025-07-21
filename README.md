@@ -1,0 +1,1 @@
+# edit-point-of-sale-odoo-v18
