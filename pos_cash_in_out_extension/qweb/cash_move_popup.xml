@@ -1,0 +1,21 @@
+<odoo>
+    <template id="custom_cash_move_popup" inherit_id="point_of_sale.CashMovePopup">
+        <xpath expr="//div[@class='input-group']" position="before">
+            <div t-if="props.isCashIn">
+                <label>نوع الإيراد:</label>
+                <select class="form-control" t-model="reason_type">
+                    <option value="partner">جاري الشريك</option>
+                    <option value="other_income">إيرادات أخرى</option>
+                </select>
+            </div>
+            <div t-if="!props.isCashIn">
+                <label>نوع المصروف:</label>
+                <select class="form-control" t-model="reason_type">
+                    <option value="electricity">مصاريف كهرباء</option>
+                    <option value="other_expense">مصاريف أخرى</option>
+                    <option value="partner">جاري الشريك</option>
+                </select>
+            </div>
+        </xpath>
+    </template>
+</odoo>
